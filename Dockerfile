@@ -257,6 +257,7 @@ RUN apk --update --no-cache add \
     unzip \
     util-linux \
     zip \
+  && pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple \
   && pip3 install --upgrade --break-system-packages pip \
   && pip3 install --break-system-packages cfscrape cloudscraper \
   && addgroup -g ${PGID} rtorrent \
